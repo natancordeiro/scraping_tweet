@@ -99,6 +99,7 @@ class Navegador(webdriver.Chrome):
         
         servico = Service(ChromeDriverManager().install())
         self.driver = webdriver.Chrome(chrome_options, servico)
+        self.driver.minimize_window()
         self.action = ActionChains(self.driver)
 
     def navegar(self, url):
